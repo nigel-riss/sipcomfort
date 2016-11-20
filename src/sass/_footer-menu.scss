@@ -1,0 +1,66 @@
+.footer-menu {
+    // border: 1px solid red;
+    // box model
+    float: right;
+
+    &__list {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+
+    &__item {
+        //
+    }
+
+    &__link {
+        // positioning
+        position: relative;
+
+        // box model
+        display: inline-block;
+        padding: 6px 10px;
+
+        // typography
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 300;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &--active {
+            // typography
+            color: $mainColor;
+
+            // visual
+            background-color: #ffffff;
+        }
+
+        &:before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            // box model
+            display: none;
+            height: 100%;
+            width: 2px;
+
+            // visual
+            background-color: #ffffff;
+        }
+
+        &:hover {
+            &:before {
+                // box model
+                display: block;
+            }
+        }
+    }
+}

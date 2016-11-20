@@ -1,0 +1,47 @@
+.project-images {
+    // box model
+    &__projection {
+        @media(min-width: $desktop) {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            width: calc(50% - 2px);
+            margin-right: 2px;
+        }
+    }
+
+    &__blueprints {
+        @media(min-width: $tablet) {
+            & .project-image {
+                width: 50%;
+                width: calc(50% - 2px);
+            }
+        }
+
+        @media(min-width: $desktop) {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+        }
+    }
+
+    // typography
+    @media(min-width: $tablet) {
+        font-size: 0;
+    }
+}
+
+.project-image {
+    // box model
+    width: 100%;
+    margin: 1px;
+
+    // visual
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0 0 1px #ffffff;
+
+    &:hover {
+        border: 1px solid $mainColor;
+        box-shadow: 0 0 0 1px $mainColor;
+    }
+}

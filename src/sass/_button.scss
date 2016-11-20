@@ -1,0 +1,40 @@
+.button {
+    // positioning
+    position: relative;
+    top: 0;
+
+    // box model
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+
+    // typography
+    color: #ffffff;
+    font-family: $titleFont;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $mainColor;
+    border-radius: 3px;
+    transition: all 0.1s linear;
+
+    &--inverse {
+        // typography
+        color: $mainColor;
+
+        // visual
+        background-color: #ffffff;
+        /*transition-duration: 1.5s;
+        transition-delay: 1s;*/
+    }
+
+
+    &:hover {
+        // positioning
+        top: -2px;
+
+        // visual
+        box-shadow: 0 2px 7px 0 rgba(60, 60, 60, 0.5);
+    }
+}

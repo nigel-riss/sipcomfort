@@ -1,0 +1,119 @@
+.hero {
+    // positioning
+    position: relative;
+
+    // box model
+    @media(min-width: $tablet) {
+        height: 500px;
+    }
+    @media(min-width: $desktop) {
+        height: 650px;
+    }
+
+    // visual
+    background-color: #786f68;
+    background-image: url("img/back-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media(min-width: $tablet) {
+        background-image: url("img/back-tablet.jpg");
+        box-shadow: 0 -2px 17px 0 #000000;
+    }
+    @media(min-width: $desktop) {
+        background-image: url("img/back-desktop.jpg");
+    }
+
+    &__header {
+        // positioning
+        @media(min-width: $tablet) {
+            position: absolute;
+            top: 40px;
+            left: -10px;
+        }
+
+        // box model
+        margin: 0 -10px;
+        padding: 20px;
+        @media(min-width: $tablet) {
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        // typography
+        color: #ffffff;
+        font-family: $titleFont;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-transform: uppercase;
+        @media(min-width: $tablet) {
+            /*color: $mainColor;*/
+            font-size: 36px;
+        }
+
+        // visual
+        background-color: $labelColor;
+        text-shadow: 0 3px 5px rgba(60, 60, 60, 0.5);
+        @media(min-width: $tablet) {
+            background-color: transparent;
+        }
+    }
+
+    &__text {
+        // positioning
+        @media(min-width: $tablet) {
+            position: absolute;
+            top: 200px;
+        }
+
+        // box model
+        margin: 0 -10px;
+        padding: 20px;
+        @media(min-width: $tablet) {
+            width: 600px;
+        }
+
+        // typography
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+        @media(min-width: $desktop) {
+            font-size: 18px;
+        }
+
+        // visual
+        background-color: $labelColor;
+    }
+
+    &__address {
+        text-shadow: 0 3px 5px rgba(60, 60, 60, 0.5);
+        // positioning
+        @media(min-width: $tablet) {
+            position: absolute;
+            /*bottom: 110px;*/
+            top: 40px;
+            right: 10px;
+        }
+
+        // box model
+        padding: 10px 20px 20px;
+        margin: 0 -10px;
+        @media(min-width: $tablet) {
+            padding: 15px 20px;
+        }
+
+        // typography
+        color: #ffffff;
+        font-family: $copyFont;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        line-height: 1.6;
+        text-transform: uppercase;
+
+        // visual
+        background-color: $labelColor;
+    }
+}

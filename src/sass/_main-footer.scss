@@ -1,0 +1,53 @@
+.main-footer {
+    // positioning
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    // box model
+    padding: 20px 0;
+    width: 100%;
+
+    // visual
+    background-color: $mainColor;
+
+    &:after {
+        content: "";
+
+        // box model
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+}
+
+.footer-info {
+    // box model
+    float: left;
+}
+
+.footer-address {
+    // border: 1px solid red;
+    // box model
+    padding: 12px;
+
+    // typography
+    color: #ffffff;
+    font-family: $copyFont;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.footer-copy {
+    // box model
+    padding-left: 12px;
+    padding-bottom: 20px;
+
+    // typography
+    color: #ffffff;
+    font-family: $copyFont;
+    font-size: 12px;
+    font-weight: 300;
+}

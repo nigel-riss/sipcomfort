@@ -1,0 +1,61 @@
+@import "normalize";
+
+@import "vars";
+@import "mixins";
+@import "hero";
+@import "main-menu";
+@import "logo";
+@import "main-header";
+@import "menu-button";
+@import "section";
+@import "header-icon";
+@import "features";
+@import "pop-projects";
+@import "button";
+@import "main-footer";
+@import "footer-menu";
+@import "project-group";
+@import "project-image";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    // positioning
+    position: relative;
+
+    // box model
+    min-height: 100%;
+}
+
+body {
+    // box model
+    // min-height: 100%;
+    margin: 0 0 220px;
+
+    // typography
+    font-family: $copyFont;
+    background-color: #ffffff;
+}
+
+.container {
+    // box model
+    margin: 0 auto;
+    max-width: $desktop;
+    padding: 0 10px;
+
+    &--relative {
+        // positioning
+        position: relative;
+
+        // box model
+        /*border: 1px solid red;*/
+        height: 100%;
+    }
+}
+
+a {
+    // typography
+    text-decoration: none;
+}

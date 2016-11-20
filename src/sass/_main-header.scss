@@ -1,0 +1,34 @@
+.main-header {
+    // box model
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+
+    // typography
+    color: $mainColor;
+    font-family: $titleFont;
+    font-size: 32px;
+    @media(min-width: $tablet) {
+        font-size: 40px;
+    }
+    @media(min-width: $desktop) {
+        font-size: 48px;
+    }
+
+    &__caption {
+        // box model
+        display: inline-block;
+        padding: 0 10px;
+
+        // typography
+        color: #ffffff;
+
+        // visual
+        background-color: $mainColor;
+    }
+
+    &__area {
+        // typography
+        font-size: 60%;
+    }
+}

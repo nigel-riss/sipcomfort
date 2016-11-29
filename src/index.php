@@ -135,8 +135,6 @@
         </div>
     </section>
 
-
-    <!--
     <section class="section  section--inverse">
         <div class="container">
             <h2 class="section__header section__header--inverse">
@@ -144,19 +142,38 @@
             </h2>
 
             <div class="pop-projects">
-                <a href="">
-                    <div class="pop-project">
-                        <img src="img/pop-1.jpg" alt="проект дома предпросмотр" class="pop-project__image">
-                        <div class="pop-project__desc">
-                            <div class="pop-project__name">
-                                проект <span class="pop-project__name--inverse">компакт</span>
-                                <span class="pop-project__area">85м<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <?php 
+                    $args = array(
+                        'category_name' => 'popular_projects' 
+                    );
+                    
+                    query_posts($args);
 
-                <a href="">
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post();
+                            $project_name       = get_field('project_name');
+                            $area               = get_field('area');
+                            $price              = get_field('price');
+                            $main_image         = get_field('main_image');
+                ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="pop-project">
+                                    <img src="<?php echo $main_image ?>" alt="проект дома предпросмотр" class="pop-project__image">
+                                    <div class="pop-project__desc">
+                                        <div class="pop-project__name">
+                                            проект <span class="pop-project__name--inverse"><?php echo $project_name ?></span>
+                                            <span class="pop-project__area"><?php echo $area ?>м<sup>2</sup></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                <?php
+                        }
+                    }
+                ?>
+
+                <!--<a href="">
                     <div class="pop-project">
                         <img src="img/pop-2.jpg" alt="проект дома предпросмотр" class="pop-project__image">
                         <div class="pop-project__desc">
@@ -178,13 +195,12 @@
                             </div>
                         </div>
                     </div>
-                </a>
+                </a>-->
             </div>
 
             <a href="all-projects.html" class="button button--inverse">Смотреть все проекты</a>
         </div>
     </section>
-    -->
 
 
     <section class="section">

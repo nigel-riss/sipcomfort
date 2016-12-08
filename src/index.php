@@ -53,15 +53,43 @@
         </nav>
 
          <div class="container  container--relative">
-            <h1 class="hero__header">В комфортную жизнь<br> с новым домом из СИП-панелей</h1>
-
-            <p class="hero__text">У нас есть опыт производства малоэтажных домов для постоянного проживания, перекрытий и кровель для других типов домостроения. Производственные мощности позволяют удовлетворить как притязательного клиента, так и крупного заказчика на крупномасштабное коттеджное строительство. Наша стройгруппа способна решать вопросы не только монтажа в указанной комплектации «серого ключа», но и вести генподряд под «чистый ключ», включая изготовление ограждений участков, септиков, дренажных работ, планировки участков.</p>
-
+            <!--<h1 class="hero__header">В комфортную жизнь<br> с новым домом из СИП-панелей</h1>-->
+            <h1 class="hero__header">Комфортные дома<br> из СИП-панелей<br> от производителя</h1>
             <div class="hero__address">
-                Калининград<br> ул. Пехотная 43<br> +7(4012) 40-01-80<br> +7(902) 414-25-83 
+                Звоните сейчас!
+                <a class="hero__link hero__link--phone" href="tel:+74012400180">
+                    +7(4012) 40-01-80 
+                </a>
+                <a class="hero__link hero__link--phone" href="tel:+79024142583">
+                    +7(902) 414-25-83
+                </a>
+                <!--или пишите:
+                <a class="hero__link hero__link--phone" href="mailto:info@sipkomfort.ru">
+                    info@sipkomfort.ru
+                </a>-->
             </div>
+
+            
+            <ul class="hero__features">
+                <li>Строим каркасные дома «под ключ»</li>
+                <li>Собственное производство СИП-панелей</li>
+                <li>Лучшие цены <a class="hero__link" href="prices">смотреть</a></li>
+                <li>Только экологичные материалы</li>
+                <li>Помогаем с обустройством</li>
+            </ul>
         </div>
     </header>
+
+
+
+    <section class="section section--inverse">
+        <div class="container">
+            <p class="section__text section__text--inverse">Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измененим понравившийся вам проект по вашему желанию совершенно бесплатно. А если необходимо то разработаем новый проект с нуля или по вашим зарисовкам. 
+            </p>
+            <p class="section__text section__text--inverse">У нас есть собственное производство СИП-панелей, поэтому панели всегда есть в наличии и под заказ в любом количестве. </p>
+            <p class="section__text section__text--inverse">Наша стройгруппа способна решать вопросы не только монтажа в указанной комплектации «серого ключа», но и вести генподряд под «чистый ключ», включая изготовление ограждений участков, септиков, дренажных работ, планировки участков. А при необходимости наши партнеры изготовят вам лестницы и мебель под ваш интерер.</p>
+        </div>
+    </section>
 
 
 
@@ -131,7 +159,7 @@
                 </ul>
             </div>
 
-            <a href="technology.html" class="button">Подробнее о преимуществах и недостатках</a>
+            <a href="faq" class="button">Остались вопросы</a>
         </div>
     </section>
 
@@ -150,15 +178,17 @@
                     query_posts($args);
 
                     if(have_posts()) {
+                        $counter = 0;
                         while(have_posts()) {
                             the_post();
+                            $counter++;
                             $project_name       = get_field('project_name');
                             $area               = get_field('area');
                             $price              = get_field('price');
                             $main_image         = get_field('main_image');
                 ?>
                             <a href="<?php the_permalink(); ?>">
-                                <div class="pop-project">
+                                <div class="pop-project <?php if($counter == 3) echo 'pop-project--3rd'; ?>">
                                     <img src="<?php echo $main_image ?>" alt="проект дома предпросмотр" class="pop-project__image">
                                     <div class="pop-project__desc">
                                         <div class="pop-project__name">
@@ -172,33 +202,9 @@
                         }
                     }
                 ?>
-
-                <!--<a href="">
-                    <div class="pop-project">
-                        <img src="img/pop-2.jpg" alt="проект дома предпросмотр" class="pop-project__image">
-                        <div class="pop-project__desc">
-                            <div class="pop-project__name">
-                                проект <span class="pop-project__name--inverse">усадьба</span>
-                                <span class="pop-project__area">156м<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="pop-project  pop-project--3rd">
-                        <img src="img/pop-3.jpg" alt="проект дома предпросмотр" class="pop-project__image">
-                        <div class="pop-project__desc">
-                            <div class="pop-project__name">
-                                проект <span class="pop-project__name--inverse">комфорт</span>
-                                <span class="pop-project__area">175м<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </a>-->
             </div>
 
-            <a href="all-projects.html" class="button button--inverse">Смотреть все проекты</a>
+            <a href="projects" class="button button--inverse">Смотреть все проекты</a>
         </div>
     </section>
 
@@ -219,7 +225,7 @@
 
             <img class="section__image" src="<?php echo get_stylesheet_directory_uri(); ?>/img/sip.png" alt="СИП панель">
 
-            <a href="technology.html" class="button">Подробнее о технологии</a>
+            <a href="technology" class="button">Подробнее о технологии</a>
         </div>
     </section>
 

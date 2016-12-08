@@ -1,5 +1,5 @@
-.pop-projects {
-    // box model
+.projects {
+        // box model
     padding: 40px 0;
     padding-bottom: 20px;
 
@@ -15,8 +15,7 @@
     }
 }
 
-.pop-project {
-    // border: 1px solid red;
+.project {
     // positioning
     position: relative;
 
@@ -41,6 +40,7 @@
 
     // visual
     background-color: #ffffff;
+    border: 1px solid #cccccc;
     overflow: hidden;
 
     &:hover {
@@ -50,11 +50,11 @@
         // visual
         box-shadow: 0 3px 12px 0 rgba(60, 60, 60, 0.5);
 
-        & .pop-project__desc {
+        & .project__desc {
             background-color: $mainColor;
         }
 
-        & .pop-project__name {
+        & .project__name {
             color: #ffffff;
             &--inverse {
                 color: $mainColor;

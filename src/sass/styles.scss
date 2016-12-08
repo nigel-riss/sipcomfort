@@ -18,6 +18,9 @@
 @import "footer-menu";
 @import "project-group";
 @import "project-image";
+@import "project";
+
+@import "colorbox";
 
 * {
     box-sizing: border-box;
@@ -38,6 +41,9 @@ body {
 
     // typography
     font-family: $copyFont;
+    font-size: 16px;
+
+    // visual
     background-color: #ffffff;
 }
 

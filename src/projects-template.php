@@ -1,47 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+//  Template Name: Projects
+get_header();
 
-<head>
-    <meta charset="UTF-8">
-    <title>СИПКомфорт</title>
-
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
-
-<body>
-    <header class="">
-        <nav class="main-menu">
-            <div class="container">
-                <a href="index.html">
-                    <img class="logo" src="img/logo.png" alt="СИПКомфорт логотип">
-                </a>
-                <ul class="main-menu__list">
-                    <li class="main-menu__item">
-                        <a href="technology.html" class="main-menu__link">Технология</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link  main-menu__link--active">Проекты</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Наша работа</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="" class="main-menu__link">Услуги</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="about.html" class="main-menu__link">О компании</a>
-                    </li>
-                </ul>
-
-                <img class="menu-button" src="img/menu-button.svg" alt="menu button">
-            </div>
-        </nav>
-    </header>
+?>
 
 
-
-    <main class="section">
+<main class="section">
         <div class="container">
             <h1 class="main-header">Проекты домов</h1>
 
@@ -55,45 +19,45 @@
 
 
             <div class="project-groups">
-                <a href="project.html">
+                <a href="less-then-100-projects">
                     <div class="project-group">
-                        <img src="img/pop-1.jpg" alt="" class="project-group__image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pop-1.jpg" alt="" class="project-group__image">
                         <div class="project-group__desc">
                             <div class="project-group__name">дома до 100м<sup>2</sup></div>
                         </div>
                     </div>
                 </a>
 
-                <a href="project.html">
+                <a href="less-then-150-projects">
                     <div class="project-group project-group--2nd">
-                        <img src="img/pop-2.jpg" alt="" class="project-group__image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pop-2.jpg" alt="" class="project-group__image">
                         <div class="project-group__desc">
                             <div class="project-group__name">дома до 150м<sup>2</sup></div>
                         </div>
                     </div>
                 </a>
 
-                <a href="project.html">
+                <a href="less-then-200-projects">
                     <div class="project-group">
-                        <img src="img/pop-3.jpg" alt="" class="project-group__image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pop-3.jpg" alt="" class="project-group__image">
                         <div class="project-group__desc">
                             <div class="project-group__name">дома до 200м<sup>2</sup></div>
                         </div>
                     </div>
                 </a>
 
-                <a href="project.html">
+                <a href="more-then-200-projects">
                     <div class="project-group project-group--2nd">
-                        <img src="img/pop-4.jpg" alt="" class="project-group__image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pop-4.jpg" alt="" class="project-group__image">
                         <div class="project-group__desc">
                             <div class="project-group__name">дома более 200м<sup>2</sup></div>
                         </div>
                     </div>
                 </a>
 
-                <a href="project.html">
+                <a href="block-projects">
                     <div class="project-group">
-                        <img src="img/pop-5.jpg" alt="" class="project-group__image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pop-5.jpg" alt="" class="project-group__image">
                         <div class="project-group__desc">
                             <div class="project-group__name">блокированные дома</div>
                         </div>
@@ -134,43 +98,8 @@
     </main>
 
 
+<?php
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-info">
-                <img class="logo" src="img/footer-logo.png" alt="СИПКомфорт логотип">
-                <div class="footer-address">
-                    236038 Калининград<br> ул. Пехотная 43<br> тел.: +7(4012) 60-20-12
-                </div>
-                <div class="footer-copy">
-                    © ООО «СИПКомфорт» 2016
-                </div>
-            </div>
+get_footer();
 
-            <nav class="footer-menu">
-                <ul class="footer-menu__list">
-                    <li class="footer-menu__item">
-                        <a href="technology.html" class="footer-menu__link">Технология</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="all-projects.html" class="footer-menu__link">Проекты</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Наша работа</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="" class="footer-menu__link">Услуги</a>
-                    </li>
-                    <li class="footer-menu__item">
-                        <a href="about.html" class="footer-menu__link">О компании</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-
-
-    <script src="js/scripts.js"></script>
-</body>
-
-</html>
+?>

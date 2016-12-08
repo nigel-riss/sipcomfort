@@ -28,8 +28,11 @@
         // positioning
         @media(min-width: $tablet) {
             position: absolute;
-            top: 40px;
+            top: 20px;
             left: -10px;
+        }
+        @media(min-width: $desktop) {
+            top: 40px;
         }
 
         // box model
@@ -45,10 +48,13 @@
         font-family: $titleFont;
         font-size: 20px;
         font-weight: 700;
-        line-height: 1.4;
+        line-height: 1.6;
         text-transform: uppercase;
         @media(min-width: $tablet) {
             /*color: $mainColor;*/
+            font-size: 30px;
+        }
+        @media(min-width: $desktop) {
             font-size: 36px;
         }
 
@@ -57,6 +63,78 @@
         text-shadow: 0 3px 5px rgba(60, 60, 60, 0.5);
         @media(min-width: $tablet) {
             background-color: transparent;
+        }
+    }
+
+    &__link {
+        // box model
+        margin-left: 5px;
+        padding: 0 5px;
+        padding-bottom: 3px;
+
+        // typography
+        color: #ffffff;
+
+        // visual
+        background-color: $highlightColor;
+        border-radius: 4px;
+        text-shadow: none;
+
+        &--phone {
+            // box model
+            display: block;
+            padding: 5px 15px;
+            margin: 10px 0; 
+        }
+
+        &:hover {
+            // visual
+            opacity: 0.7;
+        }
+    }
+
+    &__features {
+        // positioning
+        @media(min-width: $tablet) {
+            position: absolute;
+            top: 200px;
+        }
+        @media(min-width: $desktop) {
+            top: 250px;
+        }
+
+        // box model
+        margin: 0 -10px;
+        padding: 20px;
+        padding-bottom: 40px;
+        @media(min-width: $tablet) {
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 30px;
+            margin-left: -40px; 
+        }
+        @media(min-width: $desktop) {
+            padding: 40px;
+        }
+
+        // typography
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 300;
+
+        // visual
+        // background-color: $labelColor;
+        background-color: $darkLabelColor;
+        list-style: none;
+
+        & li {
+            // box model
+            margin: 0;
+            padding: 5px 0;
+
+            &:before {
+                content: "— ";
+            }
         }
     }
 
@@ -71,7 +149,7 @@
         margin: 0 -10px;
         padding: 20px;
         @media(min-width: $tablet) {
-            width: 600px;
+            width: 100%;
         }
 
         // typography
@@ -98,7 +176,7 @@
         }
 
         // box model
-        padding: 10px 20px 20px;
+        padding: 20px;
         margin: 0 -10px;
         @media(min-width: $tablet) {
             padding: 15px 20px;
@@ -106,14 +184,17 @@
 
         // typography
         color: #ffffff;
-        font-family: $copyFont;
+        font-family: $titleFont;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 20px;
         letter-spacing: 0.5px;
         line-height: 1.6;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+        text-align: center;
 
         // visual
         background-color: $labelColor;
+        background-color: $darkLabelColor;
+        
     }
 }

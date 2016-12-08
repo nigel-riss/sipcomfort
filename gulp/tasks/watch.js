@@ -29,6 +29,7 @@ gulp.task('watch', function() {
 
     watch('./src/css/**/*.css', function() {
         gulp.start('copyCSS');
-        gulp.start('cssInject');
+        // gulp.start('cssInject');
+        browserSync.reload();
     });
 });

@@ -23,16 +23,32 @@ $level_2            = get_field('level_2');
 
             <div class="project-images"> 
                 <div class="project-images__projection">
-                    <img src="<?php echo $main_image ?>" alt="" class="project-image">
-                    <img src="<?php echo $additional_image ?>" alt="" class="project-image">
+                    <a class="preview" href="<?php echo $main_image ?>">
+                        <img src="<?php echo $main_image ?>" alt="" class="project-image">
+                    </a>
+                    <a class="preview" href="<?php echo $additional_image ?>">
+                        <img src="<?php echo $additional_image ?>" alt="" class="project-image">
+                    </a>
                 </div>
                 <div class="project-images__blueprints">
-                    <img src="<?php echo $projection1_8 ?>" alt="" class="project-image">
-                    <img src="<?php echo $projection8_1 ?>" alt="" class="project-image">
-                    <img src="<?php echo $projectionA_J ?>" alt="" class="project-image">
-                    <img src="<?php echo $projectionJ_A ?>" alt="" class="project-image">
-                    <img src="<?php echo $level_1 ?>" alt="" class="project-image">
-                    <img src="<?php echo $level_2 ?>" alt="" class="project-image">
+                    <a class="preview" href="<?php echo $projection1_8 ?>">
+                        <img src="<?php echo $projection1_8 ?>" alt="" class="project-image">
+                    </a>
+                    <a class="preview" href="<?php echo $projection8_1 ?>">
+                        <img src="<?php echo $projection8_1 ?>" alt="" class="project-image">
+                    </a>
+                    <a class="preview" href="<?php echo $projectionA_J ?>">
+                        <img src="<?php echo $projectionA_J ?>" alt="" class="project-image">
+                    </a>
+                    <a class="preview" href="<?php echo $projectionJ_A ?>">
+                        <img src="<?php echo $projectionJ_A ?>" alt="" class="project-image">
+                    </a>
+                    <a class="preview" href="<?php echo $level_1 ?>">
+                        <img src="<?php echo $level_1 ?>" alt="" class="project-image">
+                    </a>
+                    <a class="preview" href="<?php echo $level_2 ?>">
+                        <img src="<?php echo $level_2 ?>" alt="" class="project-image">
+                    </a>
                 </div>
             </div>
 
@@ -50,7 +66,7 @@ $level_2            = get_field('level_2');
                         кровельное покрытие из металлической или битумной черепицы с доборными металлическими элементами и водосточной системой
                     </li>
                     <li class="section__item">
-                        вентилируемый фасад: обрешетка, фасадный пенополистирол
+                        вентилируемый фасад: обрешетка, фасадный пенополистирол, сетка и протяжка клеем
                     </li>
                     <li class="section__item">
                         окна из шестикамерного профиля и водоотливы
@@ -66,4 +82,33 @@ $level_2            = get_field('level_2');
         </div>
     </main>
 
-<?php get_footer(); ?>
+
+<!--FOOTER-->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-info">
+                <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/footer-logo.png" alt="СИПКомфорт логотип">
+                <div class="footer-address">
+                    Калининград<br> ул. Пехотная 43<br> +7(4012) 40-01-80<br> +7(902) 414-25-83 
+                </div>
+                <div class="footer-copy">
+                    © ООО «СИПКомфорт» 2016
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/scripts.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.colorbox-min.js"></script>
+    <script>
+        $('.preview').colorbox({
+            rel: 'preview',
+            scrolling: false,
+            maxHeight: '80%'
+        });
+    </script>
+    <?php wp_footer(); ?>
+</body>
+
+</html>

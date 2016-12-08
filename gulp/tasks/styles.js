@@ -13,7 +13,3 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./src/css/'));
 });
 
-// Concating css files for wordpress
-gulp.task('concatCss', function() {
-    retu
-});

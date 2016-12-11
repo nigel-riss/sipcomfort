@@ -17,7 +17,15 @@ $level_2            = get_field('level_2');
 
 <main class="section">
         <div class="container">
-            <h1 class="main-header">Проект <br><span class="main-header__caption"><?php echo $project_name ?></span> <span class="main-header__area"><?php echo $area ?>м<sup>2</sup></span></h1>
+            <h1 class="main-header  main-header--project">
+                Проект <br><span class="main-header__caption"><?php echo $project_name ?></span> <span class="main-header__area"><?php echo $area ?>м<sup>2</sup></span>
+            </h1>
+            <div class="project-price project-price--canceled">
+                <?php echo $price ?><span class="project-price__currency">руб</span>
+            </div>
+            <div class="project-price">
+                <?php echo ($price * 0.93) ?><span class="project-price__currency">руб</span>
+            </div>
 
 
 
@@ -63,13 +71,19 @@ $level_2            = get_field('level_2');
                         комплект дома (перекрытия, стены, фронтоны и кровельная схема) из структурно-изоляционных панелей с каркасом и монтажными элементами
                     </li>
                     <li class="section__item">
+                        высота первого этажа 2,80м, второй этаж 1,40м до скоса крыши
+                    </li>
+                    <li class="section__item">
                         кровельное покрытие из металлической или битумной черепицы с доборными металлическими элементами и водосточной системой
                     </li>
                     <li class="section__item">
-                        вентилируемый фасад: обрешетка, фасадный пенополистирол, сетка и протяжка клеем
+                        вентилируемый фасад: обрешетка, фасадный пенополистирол
                     </li>
                     <li class="section__item">
-                        окна из шестикамерного профиля и водоотливы
+                        одно окно из шестикамерного немецкого профиля на комнату и водоотливы
+                    </li>
+                    <li class="section__item">
+                        металлическая входная дверь, стоимостью до 10000 рублей
                     </li>
                     <li class="section__item">
                         вводной щит

@@ -17,11 +17,16 @@
         padding-top: 20px;
 
         // typography
+        color: $titleColor;
         font-family: $copyFont;
         font-weight: 300;
         font-size: 28px;
         @media(min-width: $tablet) {
             font-size: 36px;
+        }
+
+        &--smaller {
+            font-size: 24px;
         }
 
         &--inverse {

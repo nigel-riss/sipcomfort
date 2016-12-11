@@ -15,16 +15,18 @@
     text-transform: uppercase;
 
     // visual
-    background-color: $mainColor;
+    background-color: $highlightColor;
     border-radius: 3px;
     transition: all 0.1s linear;
 
     &--inverse {
         // typography
-        color: $mainColor;
+        color: $titleColor;
+        // color: #ffffff;
 
         // visual
         background-color: #ffffff;
+        // background-color: $highlightColor;
         /*transition-duration: 1.5s;
         transition-delay: 1s;*/
     }

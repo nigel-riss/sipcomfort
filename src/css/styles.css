@@ -545,10 +545,35 @@ template {
     @media (min-width: 768px) {
       .hero__address {
         padding: 15px 20px; } }
+  .hero__promo {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    left: auto;
+    z-index: 9;
+    width: 172px;
+    margin: 0 auto;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .hero__promo {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        left: auto; } }
+    @media (min-width: 1000px) {
+      .hero__promo {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%); } }
+    @media (min-width: 768px) {
+      .hero__promo {
+        width: 344px; } }
+    .hero__promo img {
+      width: 100%; }
 
 .main-menu {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   margin: 0;
   padding: 10px 0;
   background-color: #64a446;
@@ -656,7 +681,7 @@ template {
   margin: 0;
   padding: 0;
   padding-bottom: 50px;
-  color: #64a446;
+  color: #3c3c3c;
   font-family: "Intro", Arial, Helvetica, sans-serif;
   font-size: 32px; }
   @media (min-width: 768px) {
@@ -665,6 +690,8 @@ template {
   @media (min-width: 1000px) {
     .main-header {
       font-size: 48px; } }
+  .main-header--project {
+    padding-bottom: 20px; }
   .main-header__caption {
     display: inline-block;
     padding: 0 10px;
@@ -695,12 +722,15 @@ template {
     margin: 0;
     padding: 0;
     padding-top: 20px;
+    color: #3c3c3c;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 28px; }
     @media (min-width: 768px) {
       .section__header {
         font-size: 36px; } }
+    .section__header--smaller {
+      font-size: 24px; }
     .section__header--inverse {
       color: #ffffff;
       font-family: "Intro", Arial, Helvetica, sans-serif; }
@@ -869,6 +899,12 @@ template {
   padding: 40px 0;
   padding-bottom: 20px;
   font-size: 0; }
+  @media (min-width: 768px) {
+    .pop-projects {
+      padding-top: 60px; } }
+  @media (min-width: 1000px) {
+    .pop-projects {
+      padding-top: 80px; } }
   .pop-projects:after {
     content: "";
     display: table;
@@ -913,6 +949,19 @@ template {
     height: calc(100% - 54px);
     width: auto;
     margin: 0 auto; }
+  .pop-project__price {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    transform: translateY(-100%);
+    background-color: #F66834;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: "Intro", Arial, Helvetica, sans-serif;
+    font-size: 16px; }
+    .pop-project__price--cancelled {
+      color: #3c3c3c;
+      text-decoration: line-through; }
   .pop-project__desc {
     position: absolute;
     bottom: 0;
@@ -940,11 +989,11 @@ template {
   font-family: "Intro", Arial, Helvetica, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #64a446;
+  background-color: #F66834;
   border-radius: 3px;
   transition: all 0.1s linear; }
   .button--inverse {
-    color: #64a446;
+    color: #3c3c3c;
     background-color: #ffffff;
     /*transition-duration: 1.5s;
         transition-delay: 1s;*/ }
@@ -1060,28 +1109,27 @@ template {
     font-size: 15px;
     text-align: center; }
 
-@media (min-width: 1000px) {
-  .project-images__projection {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    width: calc(50% - 2px);
-    margin-right: 2px; } }
-
-@media (min-width: 768px) {
-  .project-images__blueprints .project-image {
-    width: 50%;
-    width: calc(50% - 2px); } }
-
-@media (min-width: 1000px) {
-  .project-images__blueprints {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%; } }
-
-@media (min-width: 768px) {
-  .project-images {
-    font-size: 0; } }
+.project-images {
+  padding: 20px 0; }
+  @media (min-width: 768px) {
+    .project-images {
+      font-size: 0; } }
+  @media (min-width: 1000px) {
+    .project-images__projection {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      width: calc(46.7% - 2px);
+      margin-right: 2px; } }
+  @media (min-width: 768px) {
+    .project-images__blueprints .project-image {
+      width: 50%;
+      width: calc(50% - 2px); } }
+  @media (min-width: 1000px) {
+    .project-images__blueprints {
+      display: inline-block;
+      vertical-align: top;
+      width: 52.2%; } }
 
 .project-image {
   width: 100%;
@@ -1091,6 +1139,20 @@ template {
   .project-image:hover {
     border: 1px solid #64a446;
     box-shadow: 0 0 0 1px #64a446; }
+
+.project-price {
+  color: #F66834;
+  font-family: "Intro", Arial, Helvetica, sans-serif;
+  font-size: 24px; }
+  @media (min-width: 768px) {
+    .project-price {
+      font-size: 32px; } }
+  .project-price--canceled {
+    color: #64a446;
+    text-decoration: line-through; }
+  .project-price__currency {
+    font-size: 24px;
+    text-decoration: none; }
 
 .projects {
   padding: 40px 0;
@@ -1141,6 +1203,19 @@ template {
     height: calc(100% - 54px);
     width: auto;
     margin: 0 auto; }
+  .project__price {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    transform: translateY(-100%);
+    background-color: #F66834;
+    padding: 5px 10px;
+    color: #ffffff;
+    font-family: "Intro", Arial, Helvetica, sans-serif;
+    font-size: 16px; }
+    .project__price--cancelled {
+      color: #3c3c3c;
+      text-decoration: line-through; }
   .project__desc {
     position: absolute;
     bottom: 0;

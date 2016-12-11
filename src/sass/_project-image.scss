@@ -1,16 +1,25 @@
 .project-images {
     // box model
+    padding: 20px 0;
+
+    // typography
+    @media(min-width: $tablet) {
+        font-size: 0;
+    }
+
     &__projection {
+        // box model
         @media(min-width: $desktop) {
             display: inline-block;
             vertical-align: top;
             width: 50%;
-            width: calc(50% - 2px);
+            width: calc(46.7% - 2px);
             margin-right: 2px;
         }
     }
 
     &__blueprints {
+        // box model
         @media(min-width: $tablet) {
             & .project-image {
                 width: 50%;
@@ -21,13 +30,8 @@
         @media(min-width: $desktop) {
             display: inline-block;
             vertical-align: top;
-            width: 50%;
+            width: 52.2%;
         }
-    }
-
-    // typography
-    @media(min-width: $tablet) {
-        font-size: 0;
     }
 }
 

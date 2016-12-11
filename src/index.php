@@ -77,6 +77,10 @@
                 <li>Только экологичные материалы</li>
                 <li>Помогаем с обустройством</li>
             </ul>
+
+            <div class="hero__promo">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/promo.png" alt="скидка 7 процентов до 25 января">
+            </div>
         </div>
     </header>
 
@@ -191,6 +195,11 @@
                                 <div class="pop-project <?php if($counter == 3) echo 'pop-project--3rd'; ?>">
                                     <img src="<?php echo $main_image ?>" alt="проект дома предпросмотр" class="pop-project__image">
                                     <div class="pop-project__desc">
+                                        <div class="pop-project__price">
+                                            <span class="pop-project__price--cancelled">
+                                                <?php echo $price ?><small>руб</small></span><br>
+                                                <?php echo ($price * 0.93) ?><small>руб</small>
+                                        </div>
                                         <div class="pop-project__name">
                                             проект <span class="pop-project__name--inverse"><?php echo $project_name ?></span>
                                             <span class="pop-project__area"><?php echo $area ?>м<sup>2</sup></span>
@@ -204,7 +213,7 @@
                 ?>
             </div>
 
-            <a href="projects" class="button button--inverse">Смотреть все проекты</a>
+            <a href="projects" class="button">Смотреть все проекты</a>
         </div>
     </section>
 

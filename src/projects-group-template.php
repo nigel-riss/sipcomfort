@@ -35,6 +35,11 @@ if (have_posts()) {
                                 <div class="project <?php if($counter == 3) { echo 'project--3rd'; $counter = 0; }?>">
                                     <img src="<?php echo $main_image ?>" alt="проект дома предпросмотр" class="project__image">
                                     <div class="project__desc">
+                                        <div class="project__price">
+                                            <span class="project__price--cancelled">
+                                                <?php echo $price ?><small>руб</small></span><br>
+                                                <?php echo ($price * 0.93) ?><small>руб</small>
+                                        </div>
                                         <div class="project__name">
                                             проект <span class="project__name--inverse"><?php echo $project_name ?></span>
                                             <span class="project__area"><?php echo $area ?>м<sup>2</sup></span>

@@ -197,4 +197,38 @@
         background-color: $darkLabelColor;
         
     }
+
+    &__promo {
+        // positioning
+            position: absolute;
+            top: 30px;
+            right: 5px;
+            left: auto;
+            z-index: 9;
+
+        @media(min-width: $tablet) {
+            top: auto;
+            bottom: 0;
+            right: 0;
+            left: auto;
+        }
+        
+        @media(min-width: $desktop) {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        // box model
+        width: 172px;
+        margin: 0 auto;
+        text-align: center;
+        @media(min-width: $tablet) {
+            width: 344px;
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
 }

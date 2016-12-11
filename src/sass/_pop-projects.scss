@@ -2,6 +2,12 @@
     // box model
     padding: 40px 0;
     padding-bottom: 20px;
+    @media(min-width: $tablet) {
+        padding-top: 60px;
+    }
+    @media(min-width: $desktop) {
+        padding-top: 80px;
+    }
 
     // typography
     font-size: 0;
@@ -78,6 +84,29 @@
         height: calc(100% - 54px);
         width: auto;
         margin: 0 auto;
+    }
+
+    &__price {
+        // positioning
+        position: absolute;
+        top: -5px;
+        right: 5px;
+        transform: translateY(-100%);
+
+        // box model
+        background-color: $highlightColor;
+        padding: 5px 10px;
+
+        // typography
+        color: #ffffff;
+        font-family: $titleFont;
+        font-size: 16px;
+
+        &--cancelled {
+            // typography
+            color: $titleColor;
+            text-decoration: line-through;
+        }
     }
 
     &__desc {

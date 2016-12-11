@@ -80,6 +80,29 @@
         margin: 0 auto;
     }
 
+    &__price {
+        // positioning
+        position: absolute;
+        top: -5px;
+        right: 5px;
+        transform: translateY(-100%);
+
+        // box model
+        background-color: $highlightColor;
+        padding: 5px 10px;
+
+        // typography
+        color: #ffffff;
+        font-family: $titleFont;
+        font-size: 16px;
+
+        &--cancelled {
+            // typography
+            color: $titleColor;
+            text-decoration: line-through;
+        }
+    }
+
     &__desc {
         // positioning
         position: absolute;

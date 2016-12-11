@@ -5,7 +5,7 @@
     padding-bottom: 50px;
 
     // typography
-    color: $mainColor;
+    color: $titleColor;
     font-family: $titleFont;
     font-size: 32px;
     @media(min-width: $tablet) {
@@ -13,6 +13,11 @@
     }
     @media(min-width: $desktop) {
         font-size: 48px;
+    }
+
+    &--project {
+        // box model
+        padding-bottom: 20px;
     }
 
     &__caption {
